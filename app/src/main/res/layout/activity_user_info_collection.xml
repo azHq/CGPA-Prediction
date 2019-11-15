@@ -1,0 +1,855 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".UserInfoCollection">
+
+    <com.shuhart.stepview.StepView
+        android:background="@color/colorPrimary"
+        android:id="@+id/step_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        app:sv_selectedCircleColor="@color/white"
+        app:sv_selectedTextColor="@color/white"
+        app:sv_stepLineWidth="1dp"
+        app:sv_stepPadding="2dp"
+        app:sv_stepsNumber="11"
+        app:sv_nextTextColor="@color/white"
+        app:sv_nextStepLineColor="@color/white"
+        app:sv_doneCircleColor="@color/white"
+        app:sv_doneStepLineColor="@color/white"
+        app:sv_doneCircleRadius="8dp"
+        app:sv_selectedCircleRadius="8dp"
+        app:sv_selectedStepNumberColor="@color/colorPrimary"
+        app:sv_stepViewStyle="@style/StepView"
+        app:sv_doneStepMarkColor="@color/colorPrimary"
+        app:sv_stepNumberTextSize="10sp"
+        app:sv_animationType="Line"
+        app:sv_typeface="@font/roboto_italic"/>
+
+    <LinearLayout
+        android:id="@+id/layout1"
+        android:visibility="visible"
+        android:orientation="vertical"
+        android:layout_margin="10dp"
+        android:background="@drawable/back"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_margin="10dp"
+            android:fontFamily="sans-serif"
+            android:text="How much time do you read every day? "
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="#FAFAFA"
+            android:textSize="18sp"
+            android:textStyle="bold">
+
+        </TextView>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="348dp"
+            android:background="@drawable/study"
+            >
+        </Button>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <CheckBox
+                android:id="@+id/before_exam"
+                android:layout_margin="10dp"
+                android:text="read before exam only"
+                android:textColor="#FAFAFA"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            </CheckBox>
+            <CheckBox
+                android:id="@+id/one_hour_per_day"
+                android:layout_margin="10dp"
+                android:textColor="#FAFAFA"
+                android:text="1 or 2 hours a day"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            </CheckBox>
+            <CheckBox
+                android:id="@+id/three_hour_per_day"
+                android:layout_margin="10dp"
+                android:textColor="#FAFAFA"
+                android:text="3 hours or greater than 3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            </CheckBox>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout2"
+        android:visibility="gone"
+        android:orientation="vertical"
+        android:layout_margin="10dp"
+        android:background="@drawable/back"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:textColor="#FAFAFA"
+            android:layout_margin="10dp"
+            android:textStyle="bold"
+            android:text="How much time do you sleep every day? "
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textSize="20sp">
+        </TextView>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="448dp"
+            android:background="@drawable/sleep"
+            >
+        </Button>
+
+        <LinearLayout
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <CheckBox
+                android:id="@+id/sleep_six_hour_per_day"
+                android:layout_margin="10dp"
+                android:text="below 6 hours"
+                android:textColor="#FAFAFA"
+                android:textSize="12sp"
+                android:layout_width="wrap_content"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content">
+            </CheckBox>
+            <CheckBox
+                android:id="@+id/sleep_seven_hour_per_day"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:textColor="#FAFAFA"
+                android:text="7 hours"
+                android:textSize="12sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            </CheckBox>
+            <CheckBox
+                android:id="@+id/sleep_eight_hour_per_day"
+                android:layout_margin="10dp"
+                android:textColor="#FAFAFA"
+                android:textSize="12sp"
+                android:text="above 8 hours"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            </CheckBox>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout3"
+        android:visibility="gone"
+        android:orientation="vertical"
+        android:layout_margin="10dp"
+        android:background="@drawable/back"
+        android:layout_width="match_parent"
+        android:layout_height="400dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:textColor="#FAFAFA"
+            android:layout_margin="10dp"
+            android:textStyle="bold"
+            android:text="Are you in a relationship? "
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textSize="20sp">
+        </TextView>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="2dp"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="290dp"
+                    android:background="@drawable/doubleimg"
+                    >
+                </Button>
+                <Button
+                    android:id="@+id/relaition_yes"
+                    android:text="YES"
+                    android:textColor="#FAFAFA"
+                    android:background="#1A8B3F"
+                    android:layout_width="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content">
+                </Button>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="290dp"
+                    android:background="@drawable/lonely"
+                    >
+                </Button>
+                <Button
+                    android:id="@+id/relaition_no"
+                    android:text="No"
+                    android:textColor="#FAFAFA"
+                    android:background="#1A8B3F"
+                    android:layout_width="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content">
+                </Button>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/layout4"
+        android:visibility="gone"
+        android:orientation="vertical"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="3dp"
+        android:background="@drawable/back"
+        android:layout_width="match_parent"
+        android:layout_height="400dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:textColor="#FAFAFA"
+            android:layout_margin="10dp"
+            android:textStyle="bold"
+            android:text="Do you attend your class almost regularly? "
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textSize="16sp">
+        </TextView>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="2dp"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="290dp"
+                    android:background="@drawable/attendyes"
+                    >
+                </Button>
+                <Button
+                    android:id="@+id/class_yes"
+                    android:text="YES"
+                    android:textColor="#FAFAFA"
+                    android:background="#1A8B3F"
+                    android:layout_width="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content">
+                </Button>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="290dp"
+                    android:background="@drawable/attendno"
+                    >
+                </Button>
+                <Button
+                    android:id="@+id/class_no"
+                    android:text="No"
+                    android:textColor="#FAFAFA"
+                    android:background="#1A8B3F"
+                    android:layout_width="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content">
+                </Button>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout5"
+        android:visibility="gone"
+        android:orientation="vertical"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="3dp"
+        android:background="@drawable/back"
+        android:layout_width="match_parent"
+        android:layout_height="400dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:textColor="#FAFAFA"
+            android:layout_margin="10dp"
+            android:textStyle="bold"
+            android:text="Do you study in a group?"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textSize="20sp">
+        </TextView>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="2dp"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="290dp"
+                    android:background="@drawable/group_study"
+                    >
+                </Button>
+                <Button
+                    android:id="@+id/group_yes"
+                    android:text="YES"
+                    android:textColor="#FAFAFA"
+                    android:background="#1A8B3F"
+                    android:layout_width="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content">
+                </Button>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="290dp"
+                    android:background="@drawable/self_study"
+                    >
+                </Button>
+                <Button
+                    android:id="@+id/group_no"
+                    android:text="No"
+                    android:textColor="#FAFAFA"
+                    android:background="#1A8B3F"
+                    android:layout_width="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content">
+                </Button>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/layout6"
+        android:visibility="gone"
+        android:orientation="vertical"
+        android:layout_margin="10dp"
+        android:background="@drawable/back"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:textColor="#FAFAFA"
+            android:layout_margin="10dp"
+            android:textStyle="bold"
+            android:text="What is your study materials? "
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textSize="20sp">
+        </TextView>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="448dp"
+            android:background="@drawable/study_material"
+            >
+        </Button>
+
+        <LinearLayout
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <CheckBox
+                android:id="@+id/book"
+                android:layout_margin="10dp"
+                android:text="Book"
+                android:textColor="#FAFAFA"
+                android:textSize="12sp"
+                android:layout_width="wrap_content"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content">
+            </CheckBox>
+            <CheckBox
+                android:id="@+id/slide"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:textColor="#FAFAFA"
+                android:text="Slide"
+                android:textSize="12sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            </CheckBox>
+            <CheckBox
+                android:id="@+id/both"
+                android:layout_margin="10dp"
+                android:textColor="#FAFAFA"
+                android:textSize="12sp"
+                android:text="Both"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            </CheckBox>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout7"
+        android:visibility="gone"
+        android:orientation="vertical"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="3dp"
+        android:background="@drawable/back"
+        android:layout_width="match_parent"
+        android:layout_height="400dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:textColor="#FAFAFA"
+            android:layout_margin="10dp"
+            android:textStyle="bold"
+            android:text="Are you addicted to drug?"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textSize="20sp">
+        </TextView>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="2dp"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="290dp"
+                    android:background="@drawable/drug"
+                    >
+                </Button>
+                <Button
+                    android:id="@+id/drug_yes"
+                    android:text="YES"
+                    android:textColor="#FAFAFA"
+                    android:background="#1A8B3F"
+                    android:layout_width="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content">
+                </Button>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="290dp"
+                    android:background="@drawable/fresh_air"
+                    >
+                </Button>
+                <Button
+                    android:id="@+id/drug_no"
+                    android:text="No"
+                    android:textColor="#FAFAFA"
+                    android:background="#1A8B3F"
+                    android:layout_width="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content">
+                </Button>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/layout8"
+        android:visibility="gone"
+        android:orientation="vertical"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="3dp"
+        android:background="@drawable/back"
+        android:layout_width="match_parent"
+        android:layout_height="400dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:textColor="#FAFAFA"
+            android:layout_margin="10dp"
+            android:textStyle="bold"
+            android:text="Do you like to think at the time of reading?"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textSize="16sp">
+        </TextView>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="2dp"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="290dp"
+                    android:background="@drawable/think"
+                    >
+                </Button>
+                <Button
+                    android:id="@+id/think_yes"
+                    android:text="YES"
+                    android:textColor="#FAFAFA"
+                    android:background="#1A8B3F"
+                    android:layout_width="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content">
+                </Button>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="290dp"
+                    android:background="@drawable/nothink"
+                    >
+                </Button>
+                <Button
+                    android:id="@+id/think_no"
+                    android:text="No"
+                    android:textColor="#FAFAFA"
+                    android:background="#1A8B3F"
+                    android:layout_width="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content">
+                </Button>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/layout9"
+        android:visibility="gone"
+        android:orientation="vertical"
+        android:layout_margin="10dp"
+        android:background="@drawable/back"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#FAFAFA"
+            android:layout_margin="10dp"
+            android:textStyle="bold"
+            android:text="How much time do you pass by gathering with your friends?"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textSize="16sp">
+        </TextView>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="408dp"
+            android:background="@drawable/adda"
+            >
+        </Button>
+
+        <LinearLayout
+            android:gravity="center"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <CheckBox
+                android:id="@+id/friend_one_hour"
+                android:layout_margin="10dp"
+                android:text="no gathering"
+                android:textColor="#FAFAFA"
+                android:textSize="12sp"
+                android:layout_width="wrap_content"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content">
+            </CheckBox>
+            <CheckBox
+                android:id="@+id/friend_two_hour"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:textColor="#FAFAFA"
+                android:text="1 hours"
+                android:textSize="12sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            </CheckBox>
+            <CheckBox
+                android:id="@+id/friend_no_hour"
+                android:layout_margin="10dp"
+                android:textColor="#FAFAFA"
+                android:textSize="12sp"
+                android:text="above 2 hours"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            </CheckBox>
+        </LinearLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/layout10"
+        android:visibility="gone"
+        android:orientation="vertical"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="3dp"
+        android:background="@drawable/back"
+        android:layout_width="match_parent"
+        android:layout_height="400dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:textColor="#FAFAFA"
+            android:layout_margin="10dp"
+            android:textStyle="bold"
+            android:text="Do you play online games?"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textSize="16sp">
+        </TextView>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="2dp"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="290dp"
+                    android:background="@drawable/onlinegame"
+                    >
+                </Button>
+                <Button
+                    android:id="@+id/game_yes"
+                    android:text="YES"
+                    android:textColor="#FAFAFA"
+                    android:background="#1A8B3F"
+                    android:layout_width="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content">
+                </Button>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="290dp"
+                    android:background="@drawable/onlystudy"
+                    >
+                </Button>
+                <Button
+                    android:id="@+id/game_no"
+                    android:text="No"
+                    android:textColor="#FAFAFA"
+                    android:background="#1A8B3F"
+                    android:layout_width="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content">
+                </Button>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout11"
+        android:visibility="gone"
+        android:orientation="vertical"
+        android:layout_margin="10dp"
+        android:background="@drawable/back"
+        android:layout_width="match_parent"
+        android:layout_height="550dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#FAFAFA"
+            android:layout_margin="10dp"
+            android:textStyle="bold"
+            android:text="Where do you live?"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textSize="16sp">
+        </TextView>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="408dp"
+            android:background="@drawable/home"
+            >
+        </Button>
+
+        <LinearLayout
+            android:gravity="center"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <CheckBox
+                android:id="@+id/hall"
+                android:layout_margin="10dp"
+                android:text="Hall"
+                android:textColor="#FAFAFA"
+                android:textSize="12sp"
+                android:layout_width="wrap_content"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content">
+            </CheckBox>
+            <CheckBox
+                android:id="@+id/rent"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:textColor="#FAFAFA"
+                android:text="With parents"
+                android:textSize="12sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            </CheckBox>
+            <CheckBox
+                android:id="@+id/parents"
+                android:layout_margin="10dp"
+                android:textColor="#FAFAFA"
+                android:textSize="12sp"
+                android:text="House rent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            </CheckBox>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
+
+

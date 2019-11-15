@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Calculate_CGPA">
+
+    <pl.droidsonroids.gif.GifTextView
+        android:id="@+id/gifTextView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@drawable/booster2"
+        />
+
+
+
+    <Button
+        android:visibility="invisible"
+        android:id="@+id/cgpa"
+        android:background="@drawable/cgpa2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </Button>
+
+    <Button
+        android:id="@+id/text"
+        android:layout_width="374dp"
+        android:layout_height="90dp"
+        android:layout_marginTop="240dp"
+        android:background="#03FFFFFF"
+        android:fontFamily="@font/stalinist_one"
+        android:gravity="center"
+        android:text="3.50"
+        android:textColor="#CCC5C5"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></Button>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
